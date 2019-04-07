@@ -9,9 +9,19 @@ function XORgate(a,b){
         console.log("Error");
 
     }else{
+        var output="";
+        for(var i=0;i<8;i++){
 
-        var output = (parseInt(a) ^ parseInt(b));
-        console.log(output.length)
+            output = output+a.charAt(i)^b.charAt(i);
+
+        }
+
+        //var output = (a^b);
+        console.log("a is"+a);
+        console.log("b is"+b);
+        console.log(output);
+
+        /*
         if(output.length <8){
             console.log("too short");
             
@@ -21,6 +31,7 @@ function XORgate(a,b){
             }
             
         }
+        */
 
     }
 
