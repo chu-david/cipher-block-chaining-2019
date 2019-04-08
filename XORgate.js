@@ -16,24 +16,7 @@ function XORgate(a,b){
 
         }
 
-        //var output = (a^b);
-        console.log("a is"+a);
-        console.log("b is"+b);
-        console.log(output);
-
-        /*
-        if(output.length <8){
-            console.log("too short");
-            
-            for(var i=0;i<(8-output.length);i++){
-
-                output = "0"+output;
-            }
-            
-        }
-        */
-
     }
-
+    //console.log(output);
     return output
 }
