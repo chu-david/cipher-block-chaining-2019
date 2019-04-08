@@ -2,18 +2,15 @@ function convertToBinary(textIn){
 
     var binaryText="";
 
-    for(var i=0;i<textIn.length;i++){
-
-        var currentCharCodeBinary = textIn.charCodeAt(i).toString(2);
-        if(currentCharCodeBinary.length <8){
-            for(var j=0;j<(8-currentCharCodeBinary.length);j++){
+        var currentCharCodeBinary = textIn.charCodeAt(0).toString(2);
+        var loopTimes = 8-currentCharCodeBinary.length; 
+        if(loopTimes >0){
+            for(var j=0;j<loopTimes;j++){
 
                 currentCharCodeBinary="0"+currentCharCodeBinary;
             }
         }
-        binaryText = binaryText+currentCharCodeBinary;
-
-    }
+        binaryText = currentCharCodeBinary;
 
     return binaryText
 }
