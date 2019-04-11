@@ -1,13 +1,13 @@
 $(document).ready(main);
 
-    var projectManager = "Matthew";
+    function main(){
 
-    var cipherText = prompt("Type the letters to be encrypted ");
+        var projectManager = "Matthew";
 
-    var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
+        var cipherText = prompt("Type the letters to be encrypted");
 
-function main(){
+        //console.log(cipherText);
 
-    console.log(cipherText);
+        var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
 
-}
+    }
