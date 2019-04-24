@@ -1,23 +1,59 @@
-decToBin(128);
+var testletterString = "Arminianism" ;
+console.log(stringToBinary(testletterString));
 
-function decToBin(dec){
 
-    var binaryArray = new Array(8);
-    for(i=7; i>=0; i--){
-        
-        
-        if(dec >= Math.pow(2,i)){
+function stringToBinary(initialstring){
 
-            binaryArray[7-i] = 1;
-            dec = dec - Math.pow(2,i);
+    var numberArray = stringToDigits(initialstring);
+    var finsihedArray = new Array(numberArray.length);
 
-        }else{
+    for(var i=0; i< numberArray.length ; i++){
 
-            binaryArray[7-i] = 0; 
+        finsihedArray[i] = decToBin(numberArray[i]);
 
-        }
     }
 
-    console.log(binaryArray);
+    return finsihedArray;
+    
+}
+
+
+function stringToDigits(letterString){
+
+    var numberArray = new Array(letterString.length);
+
+    for(var i = 0 ; i < letterString.length; i++ ){
+
+        numberArray[i] = letterString.charCodeAt(i);
+
+    }
+
+    return numberArray;
+
+}
+
+
+function decToBin(decimal){
+
+
+
+        var binaryArray = new Array(8);
+        for(var i=7; i>=0; i--){
+            
+            if(decimal >= Math.pow(2,i)){
+
+                binaryArray[7-i] = 1;
+                decimal = decimal - Math.pow(2,i);
+
+            }else{
+
+                binaryArray[7-i] = 0; 
+
+            }
+        }
+
+        return binaryArray;
+
+
 
 }
