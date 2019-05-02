@@ -10,7 +10,7 @@ function stringToBinary(initialstring){
     for(var i=0; i< numberArray.length ; i++){
 
         finsihedArray[i] = decToBin(numberArray[i]);
-
+ 
     }
 
     return finsihedArray;
