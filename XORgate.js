@@ -1,7 +1,4 @@
 
-
-
-
 function XORgate(a, intVector){
 
     var perriwinkle = [];

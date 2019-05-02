@@ -2,15 +2,15 @@ Console.log(readfile)
 
 function readfile(){
 
-    
     $.ajax({
   
-        url:"Ihaveadream2.txt", dataType:"text", async: false,
+        url:"iHaveADream2.txt", dataType:"text", async: false,
         success: function(result){
-    
-        console.log(result)
         
-        var plaintext = result
+        var plaintext = result;
+
+        console.log(result);
+
         }
     });
 };
