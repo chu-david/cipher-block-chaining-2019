@@ -12,6 +12,6 @@ $(document).ready(main);
 
         var binaryText = stringToBinary(cipherText); 
         console.log(binaryText);
-
+        
     }
 
