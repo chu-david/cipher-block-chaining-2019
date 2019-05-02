@@ -1,5 +1,5 @@
 var testletterString = "Arminianism" ;
-//console.log(stringToBinary(testletterString));
+// console.log(stringToBinary(testletterString));
 
 
 function stringToBinary(initialstring){
