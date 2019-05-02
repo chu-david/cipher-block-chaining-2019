@@ -1,13 +1,18 @@
-console.log(XORgate())
+
+
+
 
 function XORgate(a, intVector){
 
     var perriwinkle = [];
     var xorVar = [];
 
-        for(i=a.length;i<a.length;i++){
+        for(var i=0;i<a.length;i++){
 
-            for(j=8;j<8;j++){
+            for(var j=0;j<8;j++){
+
+                console.log("Blabla"+a[i][j]);
+                console.log("Blablablabla "+intVector[j]);
 
                 if(a[i][j] == intVector[j]){
 
@@ -22,12 +27,13 @@ function XORgate(a, intVector){
             }
         
             xorVar.push(perriwinkle);
-
+            perriwinkle = [];
         }
 
         console.log(xorVar);
 
-        return(xorVar);
+        return xorVar
+        
 
 }
 
