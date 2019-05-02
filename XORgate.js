@@ -16,11 +16,11 @@ function XORgate(a, intVector){
 
                 if(a[i][j] == intVector[j]){
 
-                    perriwinkle.push("0");
+                    perriwinkle.push(0);
 
                 }else if(a[i][j] != intVector[j]){
 
-                    perriwinkle.push("1");
+                    perriwinkle.push(1);
                     
                 }
 
