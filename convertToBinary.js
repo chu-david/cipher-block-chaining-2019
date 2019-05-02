@@ -1,5 +1,6 @@
-var testletterString = "Arminianism" ;
-console.log(stringToBinary(testletterString));
+//var testletterString = "Arminianism" ;
+//var binaryDoubleArray = stringToBinary(testletterString);
+//console.log(binaryDoubleArray);
 
 
 function stringToBinary(initialstring){
@@ -35,25 +36,22 @@ function stringToDigits(letterString){
 
 function decToBin(decimal){
 
+    var binaryArray = new Array(8);
 
+    for(var i=7; i>=0; i--){
+        
+        if(decimal >= Math.pow(2,i)){
 
-        var binaryArray = new Array(8);
-        for(var i=7; i>=0; i--){
-            
-            if(decimal >= Math.pow(2,i)){
+            binaryArray[7-i] = 1;
+            decimal = decimal - Math.pow(2,i);
 
-                binaryArray[7-i] = 1;
-                decimal = decimal - Math.pow(2,i);
+        }else{
 
-            }else{
+            binaryArray[7-i] = 0; 
 
-                binaryArray[7-i] = 0; 
-
-            }
         }
+    }
 
-        return binaryArray;
-
-
+    return binaryArray;
 
 }
