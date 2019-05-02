@@ -1,6 +1,6 @@
-var testletterString = "Arminianism" ;
-var binaryDoubleArray = stringToBinary(testletterString);
-console.log(binaryDoubleArray);
+//var testletterString = "Arminianism" ;
+//var binaryDoubleArray = stringToBinary(testletterString);
+//console.log(binaryDoubleArray);
 
 
 function stringToBinary(initialstring){
