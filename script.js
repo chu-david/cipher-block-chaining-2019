@@ -1,8 +1,16 @@
+/**
+ * JSDoc
+ * 
+ * @author: Matthew
+ * @this 
+ * @param {letters or numbers}
+ * 
+ */
+
+
 $(document).ready(main);
 
     function main(){
-
-        var projectManager = "Matthew";
 
         var cipherText = prompt("Type the letters to be encrypted");
         //console.log(cipherText);
