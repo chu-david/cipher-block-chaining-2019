@@ -24,10 +24,8 @@ function XORgate(a, intVector){
             perriwinkle = [];
         }
 
-
     return xorVar
         
-
 }
 
 
