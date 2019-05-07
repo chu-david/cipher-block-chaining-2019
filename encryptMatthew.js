@@ -6,21 +6,24 @@
 
 var encryptionIn;
 
-function binToDec(binaryText){
+var str = "Test"; //readfile(iHaveADream2.txt);
 
-    var decimal = 0;
+var num =  str.length; //Math.floor((Math.random() * 26) + 1);
 
-    for(var i = 0; i<8; i++){
+var binaryText = stringToBinary(cipherText);
 
-        if(binaryText[i] == 1){
+console.log(num);
 
-            decimal += Math.pow(2, 7-i);
+function encryptMatthew(encryptionIn){
+
+    for (var i=0; i < encryptionIn.length; i++){
+
+        for (var j=0; j < 8; i++){
+
+            if (var)
 
         }
 
     }
 
-    return decimal;
-
-} 
-
+}

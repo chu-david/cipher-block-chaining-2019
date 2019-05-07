@@ -7,7 +7,6 @@
  * 
  */
 
-
 $(document).ready(main);
 
     function main(){
@@ -24,8 +23,13 @@ $(document).ready(main);
 
         var a = binaryText;
 
+        // doesn't work console.log(binToDec(binaryText));
+
         var encryptionIn = XORgate(a, intVector);
         console.log(encryptionIn);
+
+        var encryptionOut = encryptedData;
+        console.log(encryptionOut);
         
     }
 
