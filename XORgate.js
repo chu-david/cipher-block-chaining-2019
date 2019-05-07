@@ -1,4 +1,13 @@
 
+/*
+
+@Author: Davis TheLotl
+@Returns: returns a double array created from a provided double array consisting of 8-bit binary strings, and a 8-bit initialisation vector
+
+@param: a={double array of 8-bit letters}
+@param: intVector={8-bit string to compare}
+*/
+
 function XORgate(a, intVector){
 
     var perriwinkle = [];
@@ -23,7 +32,9 @@ function XORgate(a, intVector){
             xorVar.push(perriwinkle);
             perriwinkle = [];
         }
-
+/* 
+@exports: double array containing 8-bit binary corresponding to letters
+*/
     return xorVar
         
 }
