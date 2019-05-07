@@ -23,8 +23,11 @@ $(document).ready(main);
         console.log(binaryText);
 
         var a = binaryText;
-
+                                            
         var encryptionIn = XORgate(a, intVector);
+        var keyArmin = "Yes!";
+        var ArminEncryption = ArminVigenere(encryptionIn, keyArmin);
+
         console.log(encryptionIn);
         
     }
