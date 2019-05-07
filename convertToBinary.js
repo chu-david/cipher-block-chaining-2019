@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 //var testletterString = "Arminianism" ;
 //var binaryDoubleArray = stringToBinary(testletterString);
 //console.log(binaryDoubleArray);
 
 
+=======
+>>>>>>> f9fcba89eb433e4c7d8567acede8583a390b8806
 function stringToBinary(initialstring){
 
     var numberArray = stringToDigits(initialstring);
@@ -36,25 +39,54 @@ function stringToDigits(letterString){
 
 function decToBin(decimal){
 
+    var binaryArray = new Array(8);
 
+    for(var i=7; i>=0; i--){
+        
+        if(decimal >= Math.pow(2,i)){
 
-        var binaryArray = new Array(8);
-        for(var i=7; i>=0; i--){
-            
-            if(decimal >= Math.pow(2,i)){
+            binaryArray[7-i] = 1;
+            decimal = decimal - Math.pow(2,i);
 
-                binaryArray[7-i] = 1;
-                decimal = decimal - Math.pow(2,i);
+        }else{
 
-            }else{
+            binaryArray[7-i] = 0; 
 
-                binaryArray[7-i] = 0; 
-
-            }
         }
+    }
 
-        return binaryArray;
-
-
+    return binaryArray;
 
 }
+
+function binaryToString(binaryDoubleArray){
+
+    var string = "";
+
+    for(var i = 0; i<binaryDoubleArray.length; i++){
+
+        string += String.fromCharCode(binToDec(binaryDoubleArray[i])); 
+
+    }
+
+    return string;
+
+}
+
+function binToDec(binary){
+
+    var decimal = 0;
+
+    for(var i = 0; i<8; i++){
+
+        if(binary[i] == 1){
+
+            decimal += Math.pow(2, 7-i);
+
+        }
+
+    }
+
+    return decimal;
+
+} 
