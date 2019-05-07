@@ -1,8 +1,11 @@
 Console.log(readfile)
 
+var plaintext = readfile(); 
+var result = [];
+
 function readfile(){
 
-    
+
     $.ajax({
   
         url:"Ihaveadream2.txt", dataType:"text", async: false,
@@ -10,16 +13,21 @@ function readfile(){
     
         console.log(result)
         
-        var plaintext = result
-        }
+            
+        }   
     });
+
+    return result;
+
 };
+
+
 
 /*function csvJSON(csv){
 
     var lines=csv.split("\n");
 
-    var result = [];
+    
 
     var headers=lines[0].split(",");
 
