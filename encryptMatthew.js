@@ -79,6 +79,20 @@ function encryptMatthew(decimal, shiftOfDecimal){
 
         enc[i] = (decimal[i] + shift);
 
+        if (enc[i] > 126){
+
+            enc[i] = enc[i] - 95;
+
+        }
+
+        else {
+
+            break;
+
+        }
+
     }
+
+    return enc;
 
 }
