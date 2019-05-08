@@ -7,13 +7,13 @@
  * 
  */
 
-var dec = convertToDec(encryptionIn);
+var dec = convertToDec(binaryText);
 
 var shift = 2; // prompt("Input numbers of letters shifted") or Math.floor(Math.random() * 26);
 
 var enc = encryptMatthew(dec, shift);
 
-var encryptionOut = decToBin(enc);
+var cipherText = decToBin(enc);
 
 /**
  * 
@@ -61,7 +61,7 @@ function binToDec(binary){
 
     return decimal;
 
-} 
+}  
 
 /**
  * 
@@ -110,7 +110,7 @@ function encryptMatthew(decimal, shiftOfDecimal){
 
     for (var i=0; i < decimal.length; i++){
 
-        encryptionArray[i] = (decimal[i] + shift);
+        encryptionArray[i] = (decimal[i] + shiftOfDecimal);
 
         if (encryptionArray[i] > 126){
 
