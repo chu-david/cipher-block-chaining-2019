@@ -2,8 +2,8 @@
  * 
  * @author Matthew Rohrlach
  * 
- * @param 
- * @returns encrypted value
+ * @param {encryptionIn} - Double array from XORgate function that contains the binary for ever letter, contains multiple letters
+ * @returns {encryptionOut} - Encrypted value in binary form
  * 
  */
 
@@ -12,6 +12,10 @@ var encryptionIn = XORgate(a, intVector);
 var dec = convertToDec(encryptionIn);
 
 var shift = 2; // prompt("Input numbers of letters shifted") or Math.floor(Math.random() * 26);
+
+var enc = encryptMatthew(dec, shift);
+
+var encryptionOut = decToBin(enc);
 
 /**
  * 
@@ -38,7 +42,7 @@ function convertToDec(doubleArray){
 /**
  * Function
  * @author Armin Schmarewski
- * @param {binary} - input the variable which contains binary digits (up to 8 digits, otherwise adjust for loop)
+ * @param {binary} - Input the variable which contains binary digits (up to 8 digits, otherwise adjust for loop)
  * @returns {decimal} - Returns the decimal, works in collaboration with convertToDec function
  * 
  */
@@ -63,25 +67,56 @@ function binToDec(binary){
 
 /**
  * 
+ * @author Armin Schmarewski
+ * 
+ * @param {decimal} -  Takes in decimal from encryptMatthew function
+ * @returns {binary} - Returns the binary of what was encrypted
+ * 
+ */
+
+function decToBin(decimal){
+
+    var binary = new Array(8);
+
+    for(var i=7; i>=0; i--){
+        
+        if(decimal >= Math.pow(2,i)){
+
+            binary[7-i] = 1;
+            decimal = decimal - Math.pow(2,i);
+
+        }else{
+
+            binary[7-i] = 0; 
+
+        }
+    }
+
+    return binary;
+
+}
+
+/**
+ * 
  * @author Matthew Rohrlach
  * 
- * @param {decimal} - decimal used from binToDec function, will be a two or three digit number 
- * @param {shiftOfDecimal} - the amount of places the letter or number (which is represented by a decimal) will be shifted
- * @returns {enc} - encrypted information through the caesar cipher
+ * @param {decimal} - Decimal used from binToDec function, will be a two or three digit number 
+ * @param {shiftOfDecimal} - The amount of places the letter or number (which is represented by a decimal) will be shifted
+ * @returns {encryptionArray} - Encrypted information through the caesar cipher in decimal form
  *  
  */
 
 function encryptMatthew(decimal, shiftOfDecimal){
 
-    var enc = new Array(decimal.length);
+    var encryptionArray = new Array(decimal.length);
 
     for (var i=0; i < decimal.length; i++){
 
-        enc[i] = (decimal[i] + shift);
+        encryptionArray[i] = (decimal[i] + shift);
 
-        if (enc[i] > 126){
+        if (encryptionArray[i] > 126){
 
-            enc[i] = enc[i] - 95;
+            encryptionArray[i] = encryptionArray[i] - 95;
 
         }
 
@@ -93,6 +128,6 @@ function encryptMatthew(decimal, shiftOfDecimal){
 
     }
 
-    return enc;
+    return encryptionArray;
 
 }

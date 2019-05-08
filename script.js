@@ -31,11 +31,9 @@ $(document).ready(main);
 
         console.log(convertToDec(encryptionIn));
 
-        var MatthewEncryption = (encryptMatthew(dec, shift));
         console.log(encryptMatthew(dec, shift));
 
-        var encryptionOut = encryptedData;
-        console.log(encryptionOut);
+        console.log(decToBin(enc));
         
     }
 
