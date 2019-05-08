@@ -14,8 +14,10 @@ $(document).ready(main);
         var cipherText = prompt("Type the letters to be encrypted");
         //console.log(cipherText);
 
-        var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
+        var testDec = [127, 89, 90];
+        console.log(testDec);
 
+        var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
         console.log(intVector);
 
         var binaryText = stringToBinary(cipherText); 

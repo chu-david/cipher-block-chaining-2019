@@ -7,8 +7,6 @@
  * 
  */
 
-var encryptionIn = XORgate(a, intVector);
-
 var dec = convertToDec(encryptionIn);
 
 var shift = 2; // prompt("Input numbers of letters shifted") or Math.floor(Math.random() * 26);
@@ -120,9 +118,13 @@ function encryptMatthew(decimal, shiftOfDecimal){
 
         }
 
-        else {
+        else if (encryptionArray[i] < 32) {
 
-            break;
+            encryptionArray[i] = 32;
+
+        }
+
+        else {
 
         }
 
