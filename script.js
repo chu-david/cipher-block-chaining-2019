@@ -16,8 +16,6 @@ $(document).ready(main);
 
         var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
 
-        //plaintext();
-
         var binaryText = stringToBinary(cipherText); 
         console.log(binaryText);
 
@@ -27,6 +25,8 @@ $(document).ready(main);
 
         var encryptionIn = XORgate(a, intVector);
         console.log(encryptionIn);
+
+        console.log(EndArray);
 
         var encryptionOut = encryptedData;
         console.log(encryptionOut);
