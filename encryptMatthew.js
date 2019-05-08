@@ -1,21 +1,27 @@
 /**
  * 
- * @author: Matthew
+ * @author Matthew Rohrlach
  * 
- * @param: theoretically none
+ * @param 
  * @returns encrypted value
  * 
  */
 
-var encryptionIn;
+var encryptionIn = XORgate(a, intVector);
 
-var str = "Test" //readfile(iHaveADream2.txt);
+var dec = convertToDec(encryptionIn);
 
-var num =  str.length; //Math.floor((Math.random() * 26) + 1);
+var shift = 2; // prompt("Input numbers of letters shifted") or Math.floor(Math.random() * 26);
 
-console.log(num);
+/**
+ * 
+ * @author Armin Schmarewski
+ * @param {doubleArray} - The double array that contains the binary of one letter and then contains multiple letters
+ * @returns {decimalArray} - An array which contains the decimals of the letters in the doubleArray
+ * 
+ */
 
-function convertToDec(encryptionIn){ // @author: Armin Schmarewski
+function convertToDec(doubleArray){
 
     var decimalArray = new Array(doubleArray.length);
 
@@ -29,32 +35,50 @@ function convertToDec(encryptionIn){ // @author: Armin Schmarewski
 
 }
 
-function encryptMatthew(encryptionIn){ // use outer loop to check letter, inner loop to check bit and bit to compare to the key, look at sortingefficiency to shift by key amount (num). Year 10 might have some.
+/**
+ * Function
+ * @author Armin Schmarewski
+ * @param {binary} - input the variable which contains binary digits (up to 8 digits, otherwise adjust for loop)
+ * @returns {decimal} - Returns the decimal, works in collaboration with convertToDec function
+ * 
+ */
 
-    var anArray = [];
-    var endArray = [];
+function binToDec(binary){
 
-        for(var i=0; i < encryptionIn.length; i++){
+    var decimal = 0;
 
-            for(var j=0; j < 8; j++){
+    for(var i = 0; i<8; i++){
 
-                if(encryptionIn[i][j] == num[j]){
+        if(binary[i] == 1){
 
-                    anArray.push(0);
+            decimal += Math.pow(2, 7-i);
 
-                }else if(encryptionIn[i][j] != num[j]){
-
-                    anArray.push(1);
-                    
-                }
-
-            }
-        
-            endArray.push(anArray);
-            anArray = [];
-            
         }
 
-    return endArray;
+    }
+
+    return decimal;
+
+} 
+
+/**
+ * 
+ * @author Matthew Rohrlach
+ * 
+ * @param {decimal} - decimal used from binToDec function, will be a two or three digit number 
+ * @param {shiftOfDecimal} - the amount of places the letter or number (which is represented by a decimal) will be shifted
+ * @returns {enc} - encrypted information through the caesar cipher
+ *  
+ */
+
+function encryptMatthew(decimal, shiftOfDecimal){
+
+    var enc = new Array(decimal.length);
+
+    for (var i=0; i < decimal.length; i++){
+
+        enc[i] = (decimal[i] + shift);
+
+    }
 
 }

@@ -16,18 +16,23 @@ $(document).ready(main);
 
         var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
 
+        console.log(intVector);
+
         var binaryText = stringToBinary(cipherText); 
         console.log(binaryText);
-
         var a = binaryText;
-                                            
+             
         var encryptionIn = XORgate(a, intVector);
+
         var keyArmin = "Yes!";
         var ArminEncryption = ArminVigenere(encryptionIn, keyArmin);
 
         console.log(encryptionIn);
 
-        console.log(EndArray);
+        console.log(convertToDec(encryptionIn));
+
+        var MatthewEncryption = (encryptMatthew(dec, shift));
+        console.log(encryptMatthew(dec, shift));
 
         var encryptionOut = encryptedData;
         console.log(encryptionOut);
