@@ -7,25 +7,29 @@
  * 
  */
 
-
 $(document).ready(main);
 
     function main(){
 
-        var cipherText = prompt("Type the letters to be encrypted");
+        var plainText = readfile(filePath); //this doesn't work yet //prompt("Type the letters to be encrypted");
         //console.log(cipherText);
 
         var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
+        console.log(intVector);
 
-        //plaintext();
-
-        var binaryText = stringToBinary(cipherText); 
+        var binaryText = stringToBinary(plainText); 
         console.log(binaryText);
-
-        var a = binaryText;
-
+        var a = binaryText; // Davis wanted it changed to a
+             
         var encryptionIn = XORgate(a, intVector);
-        console.log(encryptionIn);
+
+        var keyArmin = "Yes!";
+        var ArminEncryption = ArminVigenere(encryptionIn, keyArmin);
+
+        //console.log(encryptionIn);
+        //console.log(convertToDec(encryptionIn));
+        //console.log(encryptMatthew(dec, shift));
+        //console.log(decToBin(enc));
         
     }
 

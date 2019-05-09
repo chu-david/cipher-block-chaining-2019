@@ -1,4 +1,4 @@
-console.log(readfile());
+console.log(readfile("ihaveadream2.txt"));
 
 var plaintext = readfile(); 
 var result = [];
