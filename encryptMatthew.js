@@ -7,90 +7,18 @@
  * 
  */
 
-var dec = convertToDec(binaryText);
+function MatthewCaesarCipher(binary){
 
-var shift = 2; // prompt("Input numbers of letters shifted") or Math.floor(Math.random() * 26);
+    var dec = convertToDec(binary);
+    console.log(convertToDec(binary));
 
-var enc = encryptMatthew(dec, shift);
+    var shift = 2; // prompt("Input numbers of letters shifted") or Math.floor(Math.random() * 26);
 
-var cipherText = decToBin(enc);
-
-/**
- * 
- * @author Armin Schmarewski
- * @param {doubleArray} - The double array that contains the binary of one letter and then contains multiple letters
- * @returns {decimalArray} - An array which contains the decimals of the letters in the doubleArray
- * 
- */
-
-function convertToDec(doubleArray){
-
-    var decimalArray = new Array(doubleArray.length);
-
-    for(var i=0; i<doubleArray.length; i++){
-
-        decimalArray[i] = binToDec(doubleArray[i]);
-
-    }
-
-    return decimalArray;
-
-}
-
-/**
- * Function
- * @author Armin Schmarewski
- * @param {binary} - Input the variable which contains binary digits (up to 8 digits, otherwise adjust for loop)
- * @returns {decimal} - Returns the decimal, works in collaboration with convertToDec function
- * 
- */
-
-function binToDec(binary){
-
-    var decimal = 0;
-
-    for(var i = 0; i<8; i++){
-
-        if(binary[i] == 1){
-
-            decimal += Math.pow(2, 7-i);
-
-        }
-
-    }
-
-    return decimal;
-
-}  
-
-/**
- * 
- * @author Armin Schmarewski
- * 
- * @param {decimal} -  Takes in decimal from encryptMatthew function
- * @returns {binary} - Returns the binary of what was encrypted
- * 
- */
-
-function decToBin(decimal){
-
-    var binary = new Array(8);
-
-    for(var i=7; i>=0; i--){
-        
-        if(decimal >= Math.pow(2,i)){
-
-            binary[7-i] = 1;
-            decimal = decimal - Math.pow(2,i);
-
-        }else{
-
-            binary[7-i] = 0; 
-
-        }
-    }
-
-    return binary;
+    var enc = encryptMatthew(dec, shift);
+    console.log(enc);
+    
+    var cipherText = decToBin(enc);
+    console.log(decToBin(enc));
 
 }
 
@@ -131,5 +59,17 @@ function encryptMatthew(decimal, shiftOfDecimal){
     }
 
     return encryptionArray;
+
+}   
+
+/*function decToBinMatthew(){
+
+    var
+
+    for (var i = 0; i < 8; i++){
+
+
+
+    }
 
 }

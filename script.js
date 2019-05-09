@@ -11,7 +11,7 @@ $(document).ready(main);
 
     function main(){
 
-        var plainText = readfile(filePath); //this doesn't work yet //prompt("Type the letters to be encrypted");
+        var plainText = prompt("Type the letters to be encrypted"); //readfile(filePath);
         //console.log(cipherText);
 
         var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
@@ -26,10 +26,7 @@ $(document).ready(main);
         var keyArmin = "Yes!";
         var ArminEncryption = ArminVigenere(encryptionIn, keyArmin);
 
-        //console.log(encryptionIn);
-        //console.log(convertToDec(encryptionIn));
-        //console.log(encryptMatthew(dec, shift));
-        //console.log(decToBin(enc));
+        var MatthewEncryption = MatthewCaesarCipher(binaryText);
         
     }
 
