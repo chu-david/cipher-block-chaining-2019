@@ -1,14 +1,14 @@
-Console.log(readfile)
+console.log(readfile());
 
 var plaintext = readfile(); 
 var result = [];
 
-function readfile(){
+function readfile(a){
 
 
     $.ajax({
-  
-        url:"Ihaveadream2.txt", dataType:"text", async: false,
+        url: a, dataType:"text", async: false,
+       // url:"Ihaveadream2.txt", dataType:"text", async: false,
         success: function(result){
     
         console.log(result)
@@ -56,3 +56,4 @@ function readfile(){
     console.log(Object.keys(data)); //looking at keys
     console.log(JSON.stringify(data, null, 2)); //visualise data stucture
     }  
+*/

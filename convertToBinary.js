@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 //var testletterString = "Arminianism" ;
 //var binaryDoubleArray = stringToBinary(testletterString);
 //console.log(binaryDoubleArray);
 
 
-=======
->>>>>>> f9fcba89eb433e4c7d8567acede8583a390b8806
 function stringToBinary(initialstring){
 
     var numberArray = stringToDigits(initialstring);
