@@ -26,7 +26,7 @@ $(document).ready(main);
         var keyArmin = "Yes!";
         var ArminEncryption = ArminVigenere(encryptionIn, keyArmin);
 
-        var MatthewEncryption = MatthewCaesarCipher(binaryText);
+        var MatthewEncryption = MatthewCaesarCipher(encryptionIn);
         
     }
 
