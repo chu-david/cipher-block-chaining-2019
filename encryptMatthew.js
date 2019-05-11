@@ -3,21 +3,23 @@
  * @author Matthew Rohrlach
  * 
  * @param {encryptionIn} - Double array from XORgate function that contains the binary for ever letter, contains multiple letters
- * @returns {encryptionOut} - Encrypted value in binary form
+ * @returns {cipherText} - Encrypted value in binary form
  * 
  */
 
 function MatthewCaesarCipher(binary){
 
     var dec = convertToDec(binary);
-    console.log(dec);
+    console.log("Matthew's input in decimal form: " + dec);
 
     var shift = Math.floor(Math.random() * 26); // or prompt("Input number of letters shifted");
+    console.log("Number of places being shifted: " + shift);
 
     var enc = encryptMatthew(dec, shift);
-    console.log(enc);
+    console.log("Matthew's encryption in decimal form: " + enc);
     
     var cipherText = decToBinMatthew(enc);
+    console.log("Matthew's encryption in binary form is below")
     console.log(cipherText);
 
 }
