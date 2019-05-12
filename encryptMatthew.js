@@ -13,7 +13,7 @@ function MatthewCaesarCipher(binary){
     console.log("Matthew's input in decimal form: " + dec);
 
     var shift = shifty(-25, 26);
-    console.log("Number of places being shifted: " + (shift % 26) + " (input was " + shift + ")");
+    console.log("Number of places being shifted: " + (shift % 26)); // + " (input was " + shift + ")");
 
     var enc = encryptMatthew(dec, shift);
     console.log("Matthew's encryption in decimal form: " + enc);

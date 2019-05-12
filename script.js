@@ -1,9 +1,10 @@
 /**
  * JSDoc
  * 
- * @author: Matthew
- * @this 
- * @param {letters or numbers}
+ * @author Matthew, Armin, Davis and Zac
+ * 
+ * @param {plainText} - Calls function which grabs text from txt file and displays it in the variable 'plainText'
+ * @returns {cipherText} - Returns encrypted value in binary form
  * 
  */
 
