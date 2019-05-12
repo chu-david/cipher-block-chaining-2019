@@ -12,8 +12,8 @@ function MatthewCaesarCipher(binary){
     var dec = convertToDec(binary);
     console.log("Matthew's input in decimal form: " + dec);
 
-    var shift = Math.floor(Math.random() * 26);
-    console.log("Number of places being shifted: " + shift);
+    var shift = -27; //Math.floor(Math.random() * 26);
+    console.log("Number of places being shifted: " + (shift % 26));
 
     var enc = encryptMatthew(dec, shift);
     console.log("Matthew's encryption in decimal form: " + enc);
@@ -37,6 +37,22 @@ function MatthewCaesarCipher(binary){
 function encryptMatthew(decimal, shiftOfDecimal){
 
     var encryptionArray = new Array(decimal.length);
+
+    if (shiftOfDecimal > 26){
+
+        shiftOfDecimal = shiftOfDecimal % 26;
+
+    }
+
+    else if (shiftOfDecimal < -26){
+
+        shiftOfDecimal = shiftOfDecimal % -26;
+
+    }
+
+    else {
+
+    }
 
     for (var i=0; i < decimal.length; i++){
 

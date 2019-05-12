@@ -22,11 +22,12 @@ $(document).ready(main);
         var a = binaryText; // Davis wanted it changed to a
              
         var encryptionIn = XORgate(a, intVector);
+        console.log(encryptionIn);
 
         var keyArmin = "Yes!";
         var ArminEncryption = ArminVigenere(encryptionIn, keyArmin);
 
-        var MatthewEncryption = MatthewCaesarCipher(encryptionIn);
+        var MatthewEncryption = MatthewCaesarCipher(encryptionIn); // cipherText
         
     }
 
