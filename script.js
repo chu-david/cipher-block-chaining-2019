@@ -15,7 +15,7 @@ $(document).ready(main);
         //console.log(cipherText);
 
         var intVector = [0, 1, 0, 0, 1, 1, 0, 1];
-        console.log(intVector);
+        //console.log(intVector);
 
         var binaryText = stringToBinary(plainText); 
         console.log(binaryText);

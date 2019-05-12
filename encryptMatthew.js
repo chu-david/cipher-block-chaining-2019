@@ -12,14 +12,14 @@ function MatthewCaesarCipher(binary){
     var dec = convertToDec(binary);
     console.log("Matthew's input in decimal form: " + dec);
 
-    var shift = Math.floor(Math.random() * 26); // or prompt("Input number of letters shifted");
+    var shift = Math.floor(Math.random() * 26);
     console.log("Number of places being shifted: " + shift);
 
     var enc = encryptMatthew(dec, shift);
     console.log("Matthew's encryption in decimal form: " + enc);
     
     var cipherText = decToBinMatthew(enc);
-    console.log("Matthew's encryption in binary form is below")
+    console.log("Matthew's encryption in binary form is below");
     console.log(cipherText);
 
 }
